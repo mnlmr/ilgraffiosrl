@@ -93,8 +93,8 @@
   --sidebar-border: oklch(0.89 0.005 260);
   --sidebar-ring: oklch(0.35 0.015 260);
   /* Texture hero: strisce verticali ton-sur-ton grigio scuro/nero */
-  --stripe-base: oklch(0.16 0.008 260);
-  --stripe-alt: oklch(0.215 0.012 260);
+  --stripe-base: oklch(0.145 0.008 260);
+  --stripe-alt: oklch(0.24 0.014 260);
 }
 
 .dark {
@@ -149,8 +149,8 @@
   background-image: repeating-linear-gradient(
     90deg,
     var(--stripe-base) 0px,
-    var(--stripe-base) 56px,
-    var(--stripe-alt) 56px,
-    var(--stripe-alt) 112px
+    var(--stripe-base) 72px,
+    var(--stripe-alt) 72px,
+    var(--stripe-alt) 144px
   );
 }
