@@ -47,7 +47,7 @@ export function SiteFooter() {
             </p>
             <address className="mt-4 space-y-1 text-sm not-italic opacity-80">
               <p>Il Graffio S.r.l.</p>
-              <p>Via F Cairoli 9/D, 23900 Lecco (LC)</p>
+              <p>Via Fratelli Cairoli 9/D, 23900 Lecco (LC)</p>
               <p>info@ilgraffiosrl.it</p>
               <p>+39 366 704 6791</p>
             </address>

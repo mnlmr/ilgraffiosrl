@@ -27,7 +27,7 @@ const COMPANY_DETAILS = [
   {
     icon: MapPin,
     label: "Indirizzo",
-    lines: ["Via F Cairoli 9/D", "23900 Lecco (LC)"],
+    lines: ["Via Fratelli Cairoli 9/D", "23900 Lecco (LC)"],
   },
   {
     icon: Phone,
