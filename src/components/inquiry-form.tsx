@@ -95,7 +95,9 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
         break;
       case "Enter":
         event.preventDefault();
-        applySuggestion(suggestions[activeIndex]);
+        if (suggestions[activeIndex]) {
+          applySuggestion(suggestions[activeIndex]);
+        }
         break;
       case "Escape":
         setShowSuggestions(false);
