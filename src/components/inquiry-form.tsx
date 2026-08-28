@@ -1,4 +1,5 @@
-import type { FormEvent } from "react";
+import type { FormEvent, KeyboardEvent } from "react";
+import { useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 const inputClass =
