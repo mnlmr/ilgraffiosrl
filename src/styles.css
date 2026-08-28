@@ -6,7 +6,7 @@
 
 /*
  * Design system — Il Graffio S.r.l.
- * Palette: Academic heritage — crema, verde lavagna, noce scuro.
+ * Palette: Forest monotone institutional — verde scuro e verde poco meno scuro.
  * Titoli: Graduate (stile College/Varsity). Testo: Archivo.
  */
 
@@ -60,76 +60,76 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.989 0.006 84.6);
-  --foreground: oklch(0.307 0.034 54.8);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.307 0.034 54.8);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.307 0.034 54.8);
-  --primary: oklch(0.431 0.056 171.2);
-  --primary-foreground: oklch(0.989 0.006 84.6);
-  --secondary: oklch(0.957 0.012 79.8);
-  --secondary-foreground: oklch(0.307 0.034 54.8);
-  --muted: oklch(0.957 0.012 79.8);
-  --muted-foreground: oklch(0.424 0.032 57.6);
-  --accent: oklch(0.914 0.017 84.6);
-  --accent-foreground: oklch(0.307 0.034 54.8);
+  --background: #f4f7f5;
+  --foreground: #0a1f1a;
+  --card: #ffffff;
+  --card-foreground: #0a1f1a;
+  --popover: #ffffff;
+  --popover-foreground: #0a1f1a;
+  --primary: #2d5a4c;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f5e9;
+  --secondary-foreground: #0a1f1a;
+  --muted: #e8f5e9;
+  --muted-foreground: #1a3a32;
+  --accent: #112e27;
+  --accent-foreground: #e8f5e9;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0.002 260);
-  --border: oklch(0.914 0.017 84.6);
-  --input: oklch(0.914 0.017 84.6);
-  --ring: oklch(0.431 0.056 171.2);
-  --chart-1: oklch(0.431 0.056 171.2);
-  --chart-2: oklch(0.367 0.046 171.7);
-  --chart-3: oklch(0.424 0.032 57.6);
-  --chart-4: oklch(0.307 0.034 54.8);
-  --chart-5: oklch(0.914 0.017 84.6);
-  --sidebar: oklch(0.957 0.012 79.8);
-  --sidebar-foreground: oklch(0.307 0.034 54.8);
-  --sidebar-primary: oklch(0.431 0.056 171.2);
-  --sidebar-primary-foreground: oklch(0.989 0.006 84.6);
-  --sidebar-accent: oklch(0.914 0.017 84.6);
-  --sidebar-accent-foreground: oklch(0.307 0.034 54.8);
-  --sidebar-border: oklch(0.914 0.017 84.6);
-  --sidebar-ring: oklch(0.431 0.056 171.2);
-  /* Texture hero: strisce verticali ton-sur-ton verde lavagna/noce */
-  --stripe-base: oklch(0.307 0.034 54.8);
-  --stripe-alt: oklch(0.431 0.056 171.2);
+  --border: #d1dcd4;
+  --input: #d1dcd4;
+  --ring: #2d5a4c;
+  --chart-1: #2d5a4c;
+  --chart-2: #1a3a32;
+  --chart-3: #3a7261;
+  --chart-4: #0a1f1a;
+  --chart-5: #a8c3ba;
+  --sidebar: #e8f5e9;
+  --sidebar-foreground: #0a1f1a;
+  --sidebar-primary: #2d5a4c;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #112e27;
+  --sidebar-accent-foreground: #e8f5e9;
+  --sidebar-border: #d1dcd4;
+  --sidebar-ring: #2d5a4c;
+  /* Texture hero: strisce verticali ton-sur-ton verde scuro / verde meno scuro */
+  --stripe-base: #0a1f1a;
+  --stripe-alt: #112e27;
 }
 
 .dark {
-  --background: oklch(0.21 0.02 55);
-  --foreground: oklch(0.989 0.006 84.6);
-  --card: oklch(0.26 0.024 55);
-  --card-foreground: oklch(0.989 0.006 84.6);
-  --popover: oklch(0.26 0.024 55);
-  --popover-foreground: oklch(0.989 0.006 84.6);
-  --primary: oklch(0.55 0.07 171.2);
-  --primary-foreground: oklch(0.21 0.02 55);
-  --secondary: oklch(0.31 0.028 55);
-  --secondary-foreground: oklch(0.989 0.006 84.6);
-  --muted: oklch(0.31 0.028 55);
-  --muted-foreground: oklch(0.75 0.03 79.8);
-  --accent: oklch(0.31 0.028 55);
-  --accent-foreground: oklch(0.989 0.006 84.6);
+  --background: #0a1f1a;
+  --foreground: #e8f5e9;
+  --card: #112e27;
+  --card-foreground: #e8f5e9;
+  --popover: #112e27;
+  --popover-foreground: #e8f5e9;
+  --primary: #3a7261;
+  --primary-foreground: #0a1f1a;
+  --secondary: #1a3a32;
+  --secondary-foreground: #e8f5e9;
+  --muted: #1a3a32;
+  --muted-foreground: #a8c3ba;
+  --accent: #2d5a4c;
+  --accent-foreground: #e8f5e9;
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.97 0.002 260);
-  --border: oklch(0.989 0.006 84.6 / 12%);
-  --input: oklch(0.989 0.006 84.6 / 16%);
-  --ring: oklch(0.55 0.07 171.2);
-  --chart-1: oklch(0.55 0.07 171.2);
-  --chart-2: oklch(0.5 0.06 171.2);
-  --chart-3: oklch(0.75 0.03 79.8);
-  --chart-4: oklch(0.989 0.006 84.6);
-  --chart-5: oklch(0.31 0.028 55);
-  --sidebar: oklch(0.26 0.024 55);
-  --sidebar-foreground: oklch(0.989 0.006 84.6);
-  --sidebar-primary: oklch(0.55 0.07 171.2);
-  --sidebar-primary-foreground: oklch(0.21 0.02 55);
-  --sidebar-accent: oklch(0.31 0.028 55);
-  --sidebar-accent-foreground: oklch(0.989 0.006 84.6);
-  --sidebar-border: oklch(0.989 0.006 84.6 / 12%);
-  --sidebar-ring: oklch(0.55 0.07 171.2);
+  --border: #e8f5e9 / 12%;
+  --input: #e8f5e9 / 16%;
+  --ring: #3a7261;
+  --chart-1: #3a7261;
+  --chart-2: #2d5a4c;
+  --chart-3: #a8c3ba;
+  --chart-4: #e8f5e9;
+  --chart-5: #1a3a32;
+  --sidebar: #112e27;
+  --sidebar-foreground: #e8f5e9;
+  --sidebar-primary: #3a7261;
+  --sidebar-primary-foreground: #0a1f1a;
+  --sidebar-accent: #2d5a4c;
+  --sidebar-accent-foreground: #e8f5e9;
+  --sidebar-border: #e8f5e9 / 12%;
+  --sidebar-ring: #3a7261;
 }
 
 @layer base {
