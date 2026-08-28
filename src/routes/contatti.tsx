@@ -27,12 +27,12 @@ const COMPANY_DETAILS = [
   {
     icon: MapPin,
     label: "Indirizzo",
-    lines: ["Via delle Arti 12", "20121 Milano (MI)"],
+    lines: ["Via F Cairoli 9/D", "23900 Lecco (LC)"],
   },
   {
     icon: Phone,
     label: "Telefono",
-    lines: ["+39 02 0000 0000"],
+    lines: ["+39 366 704 6791"],
   },
   {
     icon: Mail,
@@ -103,7 +103,7 @@ function ContattiPage() {
             <div className="mt-8 rounded-lg border border-border bg-secondary p-6">
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Il Graffio S.r.l. — Società a responsabilità limitata · P.IVA
-                00000000000
+                04288760137
               </p>
             </div>
           </div>
