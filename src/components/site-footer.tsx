@@ -47,9 +47,9 @@ export function SiteFooter() {
             </p>
             <address className="mt-4 space-y-1 text-sm not-italic opacity-80">
               <p>Il Graffio S.r.l.</p>
-              <p>Via delle Arti 12, 20121 Milano (MI)</p>
+              <p>Via F Cairoli 9/D, 23900 Lecco (LC)</p>
               <p>info@ilgraffiosrl.it</p>
-              <p>+39 02 0000 0000</p>
+              <p>+39 366 704 6791</p>
             </address>
           </div>
         </div>
@@ -57,7 +57,7 @@ export function SiteFooter() {
         <div className="mt-10 border-t border-primary-foreground/15 pt-6 text-xs opacity-70">
           <p>
             © 2026 Il Graffio S.r.l. — Tutti i diritti riservati · P.IVA
-            00000000000
+            04288760137
           </p>
         </div>
       </div>
