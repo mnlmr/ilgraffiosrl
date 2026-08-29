@@ -131,10 +131,11 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
           placeholder="mario.rossi@esempio.it"
           value={email}
           onChange={(e) => {
-            setEmail(e.target.value);
-            setShowSuggestions(true);
+            const value = e.target.value;
+            setEmail(value);
+            setShowSuggestions(value.includes("@"));
           }}
-          onFocus={() => setShowSuggestions(true)}
+          onFocus={() => setShowSuggestions(email.includes("@"))}
           onKeyDown={handleEmailKeyDown}
           className={inputClass}
         />
