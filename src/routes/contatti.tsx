@@ -23,7 +23,14 @@ export const Route = createFileRoute("/contatti")({
   component: ContattiPage,
 });
 
-const COMPANY_DETAILS = [
+type CompanyDetail = {
+  icon: typeof MapPin;
+  label: string;
+  lines: string[];
+  href?: string;
+};
+
+const COMPANY_DETAILS: CompanyDetail[] = [
   {
     icon: MapPin,
     label: "Indirizzo",
@@ -33,13 +40,15 @@ const COMPANY_DETAILS = [
     icon: Phone,
     label: "Telefono",
     lines: ["+39 366 704 6791"],
+    href: "tel:+393667046791",
   },
   {
     icon: Mail,
     label: "Email",
     lines: ["info@ilgraffiosrl.it"],
+    href: "mailto:info@ilgraffiosrl.it",
   },
-] as const;
+];
 
 function ContattiPage() {
   return (
@@ -64,27 +73,9 @@ function ContattiPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="rounded-lg border border-border bg-card p-6 sm:p-8">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-              <h2 className="font-display text-xl tracking-wide text-card-foreground">
-                Scrivici
-              </h2>
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href="mailto:info@ilgraffiosrl.it"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>Email</span>
-                </a>
-                <a
-                  href="tel:+393667046791"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>Telefono</span>
-                </a>
-              </div>
-            </div>
+            <h2 className="font-display text-xl tracking-wide text-card-foreground">
+              Scrivici
+            </h2>
             <div className="mt-6">
               <InquiryForm submitLabel="Invia messaggio" />
             </div>
@@ -99,23 +90,39 @@ function ContattiPage() {
             </p>
 
             <dl className="mt-6 space-y-6">
-              {COMPANY_DETAILS.map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-secondary">
-                    <item.icon className="h-5 w-5 text-secondary-foreground" />
+              {COMPANY_DETAILS.map((item) => {
+                const content = (
+                  <>
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-secondary">
+                      <item.icon className="h-5 w-5 text-secondary-foreground" />
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                        {item.label}
+                      </dt>
+                      {item.lines.map((line) => (
+                        <dd key={line} className="mt-1 text-sm text-foreground">
+                          {line}
+                        </dd>
+                      ))}
+                    </div>
+                  </>
+                );
+
+                return item.href ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="group flex items-start gap-4"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={item.label} className="flex items-start gap-4">
+                    {content}
                   </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                      {item.label}
-                    </dt>
-                    {item.lines.map((line) => (
-                      <dd key={line} className="mt-1 text-sm text-foreground">
-                        {line}
-                      </dd>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </dl>
 
             <div className="mt-8 rounded-lg border border-border bg-secondary p-6">
