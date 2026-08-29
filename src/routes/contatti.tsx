@@ -64,27 +64,9 @@ function ContattiPage() {
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="rounded-lg border border-border bg-card p-6 sm:p-8">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-              <h2 className="font-display text-xl tracking-wide text-card-foreground">
-                Scrivici
-              </h2>
-              <div className="flex flex-wrap items-center gap-4">
-                <a
-                  href="mailto:info@ilgraffiosrl.it"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
-                >
-                  <Mail className="h-4 w-4" />
-                  <span>Email</span>
-                </a>
-                <a
-                  href="tel:+393667046791"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
-                >
-                  <Phone className="h-4 w-4" />
-                  <span>Telefono</span>
-                </a>
-              </div>
-            </div>
+            <h2 className="font-display text-xl tracking-wide text-card-foreground">
+              Scrivici
+            </h2>
             <div className="mt-6">
               <InquiryForm submitLabel="Invia messaggio" />
             </div>
