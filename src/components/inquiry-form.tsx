@@ -139,7 +139,7 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
           onKeyDown={handleEmailKeyDown}
           className={inputClass}
         />
-        {showSuggestions && suggestions.length > 0 && (
+        {showSuggestions && atIndex >= 0 && suggestions.length > 0 && (
           <ul
             role="listbox"
             className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-md border border-border bg-card py-1 shadow-lg"
