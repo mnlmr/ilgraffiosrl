@@ -83,23 +83,39 @@ function ContattiPage() {
             </p>
 
             <dl className="mt-6 space-y-6">
-              {COMPANY_DETAILS.map((item) => (
-                <div key={item.label} className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-secondary">
-                    <item.icon className="h-5 w-5 text-secondary-foreground" />
+              {COMPANY_DETAILS.map((item) => {
+                const content = (
+                  <>
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md bg-secondary">
+                      <item.icon className="h-5 w-5 text-secondary-foreground" />
+                    </div>
+                    <div>
+                      <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                        {item.label}
+                      </dt>
+                      {item.lines.map((line) => (
+                        <dd key={line} className="mt-1 text-sm text-foreground">
+                          {line}
+                        </dd>
+                      ))}
+                    </div>
+                  </>
+                );
+
+                return item.href ? (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="group flex items-start gap-4"
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div key={item.label} className="flex items-start gap-4">
+                    {content}
                   </div>
-                  <div>
-                    <dt className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                      {item.label}
-                    </dt>
-                    {item.lines.map((line) => (
-                      <dd key={line} className="mt-1 text-sm text-foreground">
-                        {line}
-                      </dd>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </dl>
 
             <div className="mt-8 rounded-lg border border-border bg-secondary p-6">
