@@ -15,7 +15,7 @@ export function SiteFooter() {
           <div>
             <p className="font-display text-lg tracking-wide">IL GRAFFIO</p>
             <p className="mt-2 text-xs uppercase tracking-widest opacity-70">
-              S.r.l. — Servizi per la formazione
+              S.r.l.s. — Servizi per la formazione
             </p>
             <p className="mt-4 max-w-xs text-sm opacity-80">
               Servizi educativi e formativi, con attenzione alla qualità e al
@@ -46,7 +46,7 @@ export function SiteFooter() {
               Contatti
             </p>
             <address className="mt-4 space-y-1 text-sm not-italic opacity-80">
-              <p>Il Graffio S.r.l.</p>
+              <p>Il Graffio S.r.l.s.</p>
               <p>Via Fratelli Cairoli 9/D, 23900 Lecco (LC)</p>
               <p>info@ilgraffiosrl.it</p>
               <p>+39 366 704 6791</p>
@@ -56,7 +56,7 @@ export function SiteFooter() {
 
         <div className="mt-10 border-t border-primary-foreground/15 pt-6 text-xs opacity-70">
           <p>
-            © 2026 Il Graffio S.r.l. — Tutti i diritti riservati · P.IVA
+            © 2026 Il Graffio S.r.l.s. — Tutti i diritti riservati · P.IVA
             04288760137
           </p>
         </div>

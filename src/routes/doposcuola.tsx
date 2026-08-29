@@ -6,20 +6,20 @@ import { InquiryForm } from "../components/inquiry-form";
 export const Route = createFileRoute("/doposcuola")({
   head: () => ({
     meta: [
-      { title: "Doposcuola e supporto allo studio | Il Graffio S.r.l." },
+      { title: "Doposcuola e supporto allo studio | Il Graffio S.r.l.s." },
       {
         name: "description",
         content:
-          "Il servizio di Doposcuola de Il Graffio S.r.l.: affiancamento allo studio, organizzazione del lavoro quotidiano, metodo e crescita scolastica.",
+          "Il servizio di Doposcuola de Il Graffio S.r.l.s.: affiancamento allo studio, organizzazione del lavoro quotidiano, metodo e crescita scolastica.",
       },
       {
         property: "og:title",
-        content: "Doposcuola e supporto allo studio | Il Graffio S.r.l.",
+        content: "Doposcuola e supporto allo studio | Il Graffio S.r.l.s.",
       },
       {
         property: "og:description",
         content:
-          "Il servizio di Doposcuola de Il Graffio S.r.l.: affiancamento allo studio, organizzazione del lavoro quotidiano, metodo e crescita scolastica.",
+          "Il servizio di Doposcuola de Il Graffio S.r.l.s.: affiancamento allo studio, organizzazione del lavoro quotidiano, metodo e crescita scolastica.",
       },
     ],
   }),
@@ -54,13 +54,13 @@ function DoposcuolaPage() {
       <section className="border-b border-border bg-secondary">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-            Il Graffio S.r.l. — I nostri servizi
+            Il Graffio S.r.l.s. — I nostri servizi
           </p>
           <h1 className="mt-4 font-display text-3xl tracking-wide text-foreground sm:text-4xl lg:text-5xl">
             Doposcuola
           </h1>
           <p className="mt-6 max-w-3xl leading-relaxed text-muted-foreground">
-            Il Graffio S.r.l. offre un servizio di doposcuola e affiancamento
+            Il Graffio S.r.l.s. offre un servizio di doposcuola e affiancamento
             allo studio rivolto agli studenti della scuola primaria e
             secondaria. Un supporto pomeridiano strutturato, in piccoli gruppi,
             condotto da personale qualificato.
@@ -75,7 +75,7 @@ function DoposcuolaPage() {
             Il servizio
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            Il doposcuola de Il Graffio S.r.l. nasce per offrire agli studenti
+            Il doposcuola de Il Graffio S.r.l.s. nasce per offrire agli studenti
             uno spazio ordinato e seguito in cui svolgere i compiti e studiare
             con continuità. Ogni pomeriggio gli studenti sono affiancati da
             tutor che li guidano nell&rsquo;organizzazione del lavoro, nel
