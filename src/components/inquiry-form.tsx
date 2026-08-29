@@ -25,13 +25,9 @@ const EMAIL_DOMAINS = [
   "libero.it",
   "virgilio.it",
   "tiscali.it",
-  "fastwebnet.it",
   "tim.it",
   "yahoo.it",
   "live.it",
-  "aruba.it",
-  "pec.it",
-  "protonmail.com",
 ];
 
 export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps) {
