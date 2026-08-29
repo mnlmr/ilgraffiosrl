@@ -33,11 +33,13 @@ const COMPANY_DETAILS = [
     icon: Phone,
     label: "Telefono",
     lines: ["+39 366 704 6791"],
+    href: "tel:+393667046791",
   },
   {
     icon: Mail,
     label: "Email",
     lines: ["info@ilgraffiosrl.it"],
+    href: "mailto:info@ilgraffiosrl.it",
   },
 ] as const;
 
