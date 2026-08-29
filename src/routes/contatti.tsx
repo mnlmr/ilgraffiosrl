@@ -23,7 +23,14 @@ export const Route = createFileRoute("/contatti")({
   component: ContattiPage,
 });
 
-const COMPANY_DETAILS = [
+type CompanyDetail = {
+  icon: typeof MapPin;
+  label: string;
+  lines: string[];
+  href?: string;
+};
+
+const COMPANY_DETAILS: CompanyDetail[] = [
   {
     icon: MapPin,
     label: "Indirizzo",
@@ -41,7 +48,7 @@ const COMPANY_DETAILS = [
     lines: ["info@ilgraffiosrl.it"],
     href: "mailto:info@ilgraffiosrl.it",
   },
-] as const;
+];
 
 function ContattiPage() {
   return (
