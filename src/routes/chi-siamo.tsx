@@ -4,17 +4,17 @@ import { Award, Compass, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/chi-siamo")({
   head: () => ({
     meta: [
-      { title: "Chi Siamo | Il Graffio S.r.l." },
+      { title: "Chi Siamo | Il Graffio S.r.l.s." },
       {
         name: "description",
         content:
-          "Il Graffio S.r.l. è una realtà dedita ai servizi per la formazione e l'istruzione. Scopri la società e i valori che guidano il nostro lavoro.",
+          "Il Graffio S.r.l.s. è una realtà dedita ai servizi per la formazione e l'istruzione. Scopri la società e i valori che guidano il nostro lavoro.",
       },
-      { property: "og:title", content: "Chi Siamo | Il Graffio S.r.l." },
+      { property: "og:title", content: "Chi Siamo | Il Graffio S.r.l.s." },
       {
         property: "og:description",
         content:
-          "Il Graffio S.r.l. è una realtà dedita ai servizi per la formazione e l'istruzione. Scopri la società e i valori che guidano il nostro lavoro.",
+          "Il Graffio S.r.l.s. è una realtà dedita ai servizi per la formazione e l'istruzione. Scopri la società e i valori che guidano il nostro lavoro.",
       },
     ],
   }),
@@ -64,7 +64,7 @@ function ChiSiamoPage() {
             Una realtà dedita alla formazione
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            Il Graffio S.r.l. è una società che opera nel campo dei servizi
+            Il Graffio S.r.l.s. è una società che opera nel campo dei servizi
             per la formazione e l&rsquo;istruzione. Nata dall&rsquo;esperienza
             di professionisti del settore educativo, la società si propone
             come un interlocutore solido e affidabile per studenti e famiglie.

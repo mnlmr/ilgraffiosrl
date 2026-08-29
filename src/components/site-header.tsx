@@ -22,13 +22,13 @@ export function SiteHeader() {
         <Link
           to="/"
           className="flex items-baseline gap-2"
-          aria-label="Il Graffio S.r.l. — Home"
+          aria-label="Il Graffio S.r.l.s. — Home"
         >
           <span className="font-display text-xl tracking-wide text-foreground">
             IL GRAFFIO
           </span>
           <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-            S.r.l.
+            S.r.l.s.
           </span>
         </Link>
 

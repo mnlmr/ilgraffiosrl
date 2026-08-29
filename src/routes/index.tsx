@@ -4,20 +4,20 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Il Graffio S.r.l. | Servizi per la formazione e l'istruzione" },
+      { title: "Il Graffio S.r.l.s. | Servizi per la formazione e l'istruzione" },
       {
         name: "description",
         content:
-          "Il Graffio S.r.l. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
+          "Il Graffio S.r.l.s. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
       },
       {
         property: "og:title",
-        content: "Il Graffio S.r.l. | Servizi per la formazione e l'istruzione",
+        content: "Il Graffio S.r.l.s. | Servizi per la formazione e l'istruzione",
       },
       {
         property: "og:description",
         content:
-          "Il Graffio S.r.l. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
+          "Il Graffio S.r.l.s. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
       },
     ],
   }),
@@ -31,7 +31,7 @@ function HomePage() {
       <section className="hero-stripes text-primary-foreground">
         <div className="mx-auto flex min-h-[26rem] max-w-6xl flex-col items-center justify-center px-4 py-16 text-center sm:px-6 md:aspect-video md:min-h-0">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] opacity-70">
-            Il Graffio S.r.l.
+            Il Graffio S.r.l.s.
           </p>
           <h1 className="mt-4 max-w-3xl font-display text-3xl leading-tight tracking-wide sm:text-4xl lg:text-5xl">
             Servizi per la formazione e l&rsquo;istruzione
@@ -65,7 +65,7 @@ function HomePage() {
             Un impegno concreto: la formazione
           </h2>
           <p className="mt-6 leading-relaxed text-muted-foreground">
-            Il Graffio S.r.l. è una società che opera nel settore dei servizi
+            Il Graffio S.r.l.s. è una società che opera nel settore dei servizi
             per la formazione e l&rsquo;istruzione. Lavoriamo ogni giorno con
             serietà e trasparenza per offrire agli studenti e alle loro
             famiglie un punto di riferimento affidabile nel percorso

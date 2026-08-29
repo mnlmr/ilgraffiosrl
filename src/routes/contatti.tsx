@@ -6,17 +6,17 @@ import { InquiryForm } from "../components/inquiry-form";
 export const Route = createFileRoute("/contatti")({
   head: () => ({
     meta: [
-      { title: "Contatti | Il Graffio S.r.l." },
+      { title: "Contatti | Il Graffio S.r.l.s." },
       {
         name: "description",
         content:
-          "Contatta Il Graffio S.r.l.: compila il modulo o raggiungici ai recapiti indicati per informazioni sui nostri servizi di formazione.",
+          "Contatta Il Graffio S.r.l.s.: compila il modulo o raggiungici ai recapiti indicati per informazioni sui nostri servizi di formazione.",
       },
-      { property: "og:title", content: "Contatti | Il Graffio S.r.l." },
+      { property: "og:title", content: "Contatti | Il Graffio S.r.l.s." },
       {
         property: "og:description",
         content:
-          "Contatta Il Graffio S.r.l.: compila il modulo o raggiungici ai recapiti indicati per informazioni sui nostri servizi di formazione.",
+          "Contatta Il Graffio S.r.l.s.: compila il modulo o raggiungici ai recapiti indicati per informazioni sui nostri servizi di formazione.",
       },
     ],
   }),
@@ -48,7 +48,7 @@ function ContattiPage() {
       <section className="border-b border-border bg-secondary">
         <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted-foreground">
-            Il Graffio S.r.l.
+            Il Graffio S.r.l.s.
           </p>
           <h1 className="mt-4 font-display text-3xl tracking-wide text-foreground sm:text-4xl lg:text-5xl">
             Contatti
@@ -77,7 +77,7 @@ function ContattiPage() {
               Dati societari
             </h2>
             <p className="mt-2 text-sm font-medium text-foreground">
-              Il Graffio S.r.l.
+              Il Graffio S.r.l.s.
             </p>
 
             <dl className="mt-6 space-y-6">
@@ -102,7 +102,7 @@ function ContattiPage() {
 
             <div className="mt-8 rounded-lg border border-border bg-secondary p-6">
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Il Graffio S.r.l. — Società a responsabilità limitata · P.IVA
+                Il Graffio S.r.l.s. — Società a responsabilità limitata semplificata · P.IVA
                 04288760137
               </p>
             </div>

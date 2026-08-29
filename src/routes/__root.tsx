@@ -82,21 +82,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Il Graffio S.r.l. | Servizi per la formazione e l'istruzione" },
+      { title: "Il Graffio S.r.l.s. | Servizi per la formazione e l'istruzione" },
       {
         name: "description",
         content:
-          "Il Graffio S.r.l. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
+          "Il Graffio S.r.l.s. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
       },
-      { name: "author", content: "Il Graffio S.r.l." },
+      { name: "author", content: "Il Graffio S.r.l.s." },
       {
         property: "og:title",
-        content: "Il Graffio S.r.l. | Servizi per la formazione e l'istruzione",
+        content: "Il Graffio S.r.l.s. | Servizi per la formazione e l'istruzione",
       },
       {
         property: "og:description",
         content:
-          "Il Graffio S.r.l. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
+          "Il Graffio S.r.l.s. offre servizi educativi e formativi con professionalità e affidabilità. Scopri il servizio di Doposcuola e supporto allo studio.",
       },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "it_IT" },
