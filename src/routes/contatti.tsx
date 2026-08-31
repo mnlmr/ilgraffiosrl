@@ -45,8 +45,8 @@ const COMPANY_DETAILS: CompanyDetail[] = [
   {
     icon: Mail,
     label: "Email",
-    lines: ["info@ilgraffiosrl.it"],
-    href: "mailto:info@ilgraffiosrl.it",
+    lines: ["segreteria@ilgraffiosrl.it"],
+    href: "mailto:segreteria@ilgraffiosrl.it",
   },
 ];
 

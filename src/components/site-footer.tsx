@@ -50,10 +50,10 @@ export function SiteFooter() {
               <p>Via Fratelli Cairoli 9/D, 23900 Lecco (LC)</p>
               <p>
                 <a
-                  href="mailto:info@ilgraffiosrl.it"
+                  href="mailto:segreteria@ilgraffiosrl.it"
                   className="underline underline-offset-2 transition-opacity hover:opacity-100"
                 >
-                  info@ilgraffiosrl.it
+                  segreteria@ilgraffiosrl.it
                 </a>
               </p>
               <p>
