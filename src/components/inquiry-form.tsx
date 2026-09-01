@@ -1,6 +1,6 @@
 import type { FormEvent, KeyboardEvent } from "react";
 import { useEffect, useRef, useState } from "react";
-import { toast } from "sonner";
+import { CheckCircle2 } from "lucide-react";
 
 const inputClass =
   "w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring";
@@ -13,10 +13,8 @@ type InquiryFormProps = {
   submitLabel: string;
 };
 
-/**
- * Modulo dimostrativo: validazione lato client e conferma a schermo.
- * Nessun dato viene inviato o salvato.
- */
+const WEB3FORMS_ACCESS_KEY = "a737e7c6-a677-44b1-b9f2-4e444aa418e8";
+
 const EMAIL_DOMAINS = [
   "gmail.com",
   "hotmail.it",
@@ -34,6 +32,9 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
   const [email, setEmail] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const atIndex = email.indexOf("@");
@@ -61,15 +62,30 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    event.currentTarget.reset();
-    setEmail("");
-    setShowSuggestions(false);
-    toast.success("Richiesta inviata", {
-      description:
-        "Grazie per averci contattato. Il nostro team ti risponderà al più presto.",
-    });
+    setError(null);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: new FormData(event.currentTarget),
+      });
+      const result: { success?: boolean } = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error("Invio non riuscito");
+      }
+
+      setIsSent(true);
+    } catch {
+      setError(
+        "Si è verificato un errore durante l'invio. Riprova tra qualche istante oppure contattaci ai recapiti indicati."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   function applySuggestion(value: string) {
@@ -101,8 +117,25 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
     }
   }
 
+  if (isSent) {
+    return (
+      <div className="rounded-lg border border-border bg-secondary p-8 text-center">
+        <CheckCircle2 className="mx-auto h-12 w-12 text-primary" aria-hidden />
+        <h3 className="mt-4 font-display text-xl tracking-wide text-foreground">
+          Messaggio inviato
+        </h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+          Grazie per averci contattato. Abbiamo ricevuto la tua richiesta e ti
+          risponderemo al più presto.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+
       <div>
         <label htmlFor="nome" className={labelClass}>
           Nome e cognome *
@@ -197,11 +230,18 @@ export function InquiryForm({ showPhone = false, submitLabel }: InquiryFormProps
         />
       </div>
 
+      {error && (
+        <p role="alert" className="text-sm text-destructive">
+          {error}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+        disabled={isSubmitting}
+        className="inline-flex w-full items-center justify-center rounded-md bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {submitLabel}
+        {isSubmitting ? "Invio in corso…" : submitLabel}
       </button>
     </form>
   );
